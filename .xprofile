@@ -1,0 +1,25 @@
+#!/bin/bash
+
+export LANG=ja_JP.UTF-8
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export DefaultIMModule=fcitx
+
+export GDK_SCALE=1
+export GDK_DPI_SCALE=1.2
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+if [ -n "$DESKTOP_SESSION" ];then
+  eval $(gnome-keyring-daemon --start)
+  export SSH_AUTH_SOCK
+fi
+
+# mouse pointer
+xsetroot -xcf /usr/share/icons/Adwaita/cursors/left_ptr 32 &
+# background color(workaround for compton)
+hsetroot -solid "#000000" &
+
+dex -a &
+# pcmanfm -d &
+picom &

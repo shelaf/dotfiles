@@ -1,0 +1,5 @@
+set main-view = id date:default,local author commit-title:graph=yes,refs=yes
+set line-graphics = ascii
+set tab-size = 4
+set split-view-width = 70%
+set diff-highlight = true
