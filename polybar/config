@@ -102,7 +102,7 @@ label = %gb_used%
 
 [module/temperature]
 type = internal/temperature
-hwmon-path = /sys/devices/platform/nct6775.656/hwmon/hwmon3/temp2_input
+#hwmon-path = /sys/devices/platform/nct6775.656/hwmon/hwmon3/temp2_input
 interval = 2
 warn-temperature = 80
 units = false

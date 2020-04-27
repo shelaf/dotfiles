@@ -16,8 +16,9 @@ bspc config click_to_focus       any
 bspc config honor_size_hints     true
 bspc config ignore_ewmh_focus    true
 
-bspc rule -a firefox desktop='1' split_ratio=0.7 follow=off
-bspc rule -a jetbrains-idea-ce desktop='2' follow=off
+bspc rule -a firefox desktop='1' follow=off
+bspc rule -a jetbrains-idea-ce desktop='2' follow=on
+bspc rule -a jetbrains-idea desktop='2' follow=on
 bspc rule -a Viewnior state=floating
 # bspc rule -a Chromium desktop='^2'
 # bspc rule -a mplayer2 state=floating
